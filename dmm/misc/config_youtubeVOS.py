@@ -101,6 +101,8 @@ __C.EVAL.METRICS = ['J','F']
 __C.EVAL.STATISTICS= ['mean','recall','decay']
 def db_read_sequences_train_testdev_ot():
   """ Read list of sequences. """
+  if not os.path.exists(__C.FILES.DB_INFO_TRAINTESTDEVOT):
+      return []
   json_data = open(__C.FILES.DB_INFO_TRAINTESTDEVOT)
   data = json.load(json_data)
   sequences = data['videos'].keys()
