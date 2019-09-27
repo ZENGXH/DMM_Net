@@ -128,7 +128,7 @@ sh scripts/train/train_load_prop.sh
 ### Online training
 Train DMMnet on the first frame of validation set, 
 
-- first download the preprocessed data used for online training from [here](https://hkustconnect-my.sharepoint.com/:u:/g/personal/xzengaf_connect_ust_hk/ETsB6vt5U51Npzwcamb67YMBKPjC4tl5ONBilpFPTmsQyA?e=QN1VjA), extract the data and put/link the extracted folder as `/PATH/TO/datasets/youtubeVOS/train_testdev_ot`
+- first download the preprocessed data used for online training from [here](https://hkustconnect-my.sharepoint.com/:u:/g/personal/xzengaf_connect_ust_hk/ETsB6vt5U51Npzwcamb67YMBKPjC4tl5ONBilpFPTmsQyA?e=eJNJ6N), extract the data and put/link the extracted folder as `/PATH/TO/datasets/youtubeVOS/train_testdev_ot`
 
 - prepare proposal, check the Section: Prepare proposals - for training 
 
