@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 """ Configuration file."""
+import os
 import json
 import os.path as osp
 import numpy as np
