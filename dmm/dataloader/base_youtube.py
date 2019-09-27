@@ -47,16 +47,16 @@ def get_seq_path(split):
         seq = cfg.PATH.SEQUENCES_VAL
     elif split == phase.TRAINVAL.value:
         seq = cfg.PATH.SEQUENCES_TRAINVAL
-    elif split == phase.TRAINOT.value:
-        seq =  cfg.PATH.SEQUENCES_TRAINOT
-    elif split == phase.TEST.value:
-        seq =  cfg.PATH.SEQUENCES_TEST
+    #elif split == phase.TRAINOT.value:
+    #    seq =  cfg.PATH.SEQUENCES_TRAINOT
+    #elif split == phase.TEST.value:
+    #    seq =  cfg.PATH.SEQUENCES_TEST
     elif split == phase.TRAINTESTDEVOT.value:
         seq =  cfg.PATH.SEQUENCES_TRAINTESTDEVOT
-    elif split == phase.DAVISTRAIN.value:
-        seq = cfg.PATH.SEQUENCES_TRAIN_DAVIS
-    elif split == phase.DAVISVAL.value:
-        seq = cfg.PATH.SEQUENCES_VAL_DAVIS
+    #elif split == phase.DAVISTRAIN.value:
+    #    seq = cfg.PATH.SEQUENCES_TRAIN_DAVIS
+    #elif split == phase.DAVISVAL.value:
+    #    seq = cfg.PATH.SEQUENCES_VAL_DAVIS
     else:
         raise ValueError('not support %s'%split)
     return seq 
@@ -69,16 +69,16 @@ def get_seq(split):
         seq = cfg.SEQUENCES_VAL
     elif split == phase.TRAINVAL.value:
         seq = cfg.SEQUENCES_TRAINVAL
-    elif split == phase.TRAINOT.value:
-        seq =  cfg.SEQUENCES_TRAINOT
-    elif split == phase.TEST.value:
-        seq =  cfg.SEQUENCES_TEST
+    #elif split == phase.TRAINOT.value:
+    #    seq =  cfg.SEQUENCES_TRAINOT
+    #elif split == phase.TEST.value:
+    #    seq =  cfg.SEQUENCES_TEST
     elif split == phase.TRAINTESTDEVOT.value:
         seq =  cfg.SEQUENCES_TRAINTESTDEVOT
-    elif split == phase.DAVISTRAIN.value:
-        seq = cfg.SEQUENCES_TRAIN_DAVIS 
-    elif split == phase.DAVISVAL.value:
-        seq = cfg.SEQUENCES_VAL_DAVIS
+    #elif split == phase.DAVISTRAIN.value:
+    #    seq = cfg.SEQUENCES_TRAIN_DAVIS 
+    #elif split == phase.DAVISVAL.value:
+    #    seq = cfg.SEQUENCES_VAL_DAVIS
     else:
         raise ValueError('not support %s'%split)
     return seq 

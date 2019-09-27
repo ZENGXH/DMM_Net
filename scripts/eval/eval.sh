@@ -1,17 +1,13 @@
 path_to_prediction_pth='experiments/proposals/ytb_train/inference/youtubevos_val200_meta/predictions.pth'
-eval_flag=ytb_max
-NGPU=3
+eval_flag=ytb
+NGPU=2
 ranks=$(expr $NGPU - 1)
 rank=0
 batch_size=1
 input_h=255 
 input_w=448 
-MODEL='./experiments/models/ytb_train_x101_w11_mf/best_0.777_epo01/' # /epo01_iter01640/'
-MODEL='./experiments/models/ytb_train_x101/best_0.776_epo01/' # best_0.777_epo01/' # /epo01_iter01640/'
-MODEL='../../experiments/models/ytb_train_x101_w18/best_0.772_epo01/'
-# MODEL='../../experiments/models/ytb_train_x101_w11/best_0.772_epo01/'
+MODEL='./experiments/dmmnet/ytb_255_b44l3_101/epo01_iter01640/' 
 part=p100
-
 
 for i in $(seq 0 ${ranks}) 
 do

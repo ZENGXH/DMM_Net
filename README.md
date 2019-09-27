@@ -8,11 +8,10 @@
 ### Requirements:
 - PyTorch 1.1.0 
 - matplotlib 3.0.2
+- maskrnn-benchmark
 - not in requirements.txt:
-    - cython
-    - torchvision 0.2.2 
+    - cython 
     - pycocotools # (2.0-py3.7-linux-x86_64)
-    - maskrnn-benchmark
     - pyyaml yacs
     - opencv-python scikit-image
     - easydict prettytable lmdb tabulate
@@ -81,9 +80,9 @@ DMM/datasets
 
 - preprocess the proposals for training DMM: 
 ```
-python src/tools/reduce_pth_size_by_videos.py  experiments/proposals/coco81/inference/youtubevos_train3k_meta/predictions.pth  train 50
-python src/tools/reduce_pth_size_by_videos.py  experiments/proposals/coco81/inference/youtubevos_val200_meta/predictions.pth  trainval 50
-python src/tools/reduce_pth_size_by_videos.py  experiments/proposals/coco81/inference/youtubevos_testdev_online_meta/predictions.pth  train_testdev_ot 90 
+python tools/reduce_pth_size_by_videos.py  experiments/proposals/coco81/inference/youtubevos_train3k_meta/predictions.pth  train 50
+python tools/reduce_pth_size_by_videos.py  experiments/proposals/coco81/inference/youtubevos_val200_meta/predictions.pth  trainval 50
+python tools/reduce_pth_size_by_videos.py  experiments/proposals/coco81/inference/youtubevos_testdev_online_meta/predictions.pth  train_testdev_ot 90 
 ```
 
 - The files structure should look like:

@@ -39,6 +39,7 @@ setuptools=41.0.1=py37_0
 six=1.12.0=py37_0
 sqlite=3.29.0=h7b6447c_0
 tk=8.6.8=hbc83047_0
+torchvision=0.3.0=py37_cu10.0.130_1
 wheel=0.33.4=py37_0
 xz=5.2.4=h14c3975_4
 zlib=1.2.11=h7b6447c_3

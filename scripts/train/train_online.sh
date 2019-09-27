@@ -7,12 +7,13 @@ Nworkers=5
 
 model_root='./experiments/models/' # path to saved the model 
 MODEL_NAME=online_ytb 
+    # --resume -resume_path './experiments/dmmnet/ytb_255_b44l3_101/epo01_iter01640/' -epoch_resume 2 \
 
-# srun -p max12hours  --gres=gpu:$NGPU --mem=49G -c 8 -x ~/.exclude \
+ srun -p interactive --gres=gpu:$NGPU --mem=49G -c 8 -x ~/.exclude \
     python \
     -m torch.distributed.launch --nproc_per_node=$NGPU \
     train.py \
-    --resume -resume_path './experiments/dmmnet/ytb_255_b44l3_101/epo01_iter01640/' -epoch_resume 2 \
+    --resume -resume_path '/scratch/ssd001/home/xiaohui/code/experiments/models/REPEAT_sep22_ytb_tsf_255_b44l3_prev_mask/epo01_iter01640/' -epoch_resume 2 \
     -pred_offline_path 'experiments/proposals/coco81/inference/youtubevos_testdev_online_meta/asdict_90/videos/' \
     -pred_offline_path_eval './experiments/proposals/coco81/inference/youtubevos_val200_meta/asdict_50/pred_DICT.pth' \
     -load_proposals_dataset 1 \

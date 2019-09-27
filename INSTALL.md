@@ -7,7 +7,8 @@ git clone https://github.com/ZENGXH/DMM_Net.git
 ```
 conda create --name dmm --file requirements.txt -c pytorch -c conda-forge 
 pip install cython 
-pip install torchvision pycocotools  pyyaml yacs opencv-python scikit-image easydict prettytable lmdb tabulate
+pip install pycocotools pyyaml yacs opencv-python scikit-image easydict prettytable lmdb tabulate tqdm munkres tensorboardX
+# dont install torchvision with pip, otherwise it may download torch 1.2.0 auto
 ```
 
 - options: 

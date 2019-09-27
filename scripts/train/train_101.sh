@@ -6,8 +6,10 @@ seqlen=5   # max n obj
 len_clip=3 # N frames 
 Nworkers=4
 
-model_root='../../experiments/models/' # path to saved the model
-MODEL_NAME=ytb_train_x101_w11
+model_root='experiments/models/' # path to saved the model
+mkdir -p ${model_root}/log 
+
+MODEL_NAME=ytb_train_x101
 
 srun -p max12hours --gres=gpu:$NGPU --mem=45G -c 8 \
     -x ~/.exclude \
