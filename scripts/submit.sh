@@ -12,6 +12,6 @@ python tools/submission_check.py -p ${model} -s 0 && echo ${model} && cd tmp/ \
     && mkdir ${DATE} && cd ${DATE} && ln -s ../../${model} Annotations &&  echo "let zip it." \
     && zip -rq As_${key}.zip Annotations \
     && rm Annotations && echo "As_${key}.zip from ${model}" >> ../submission.md  \
-    && echo "As_${key}.zip from ${model}" 
+    && echo "submit file saved at tmp/${DATE}/As_${key}.zip"
     
 cd ../../

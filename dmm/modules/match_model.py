@@ -11,7 +11,7 @@ from dmm.utils.match_helper import compute_iou_binary_mask_2D
 import dmm.utils.match_helper as match_helper
 
 class MatchModel(nn.Module):
-    def __init__(self, cfgs={}, is_test):
+    def __init__(self, cfgs={}, is_test=0):
         super(MatchModel, self).__init__()
         self.cfgs = cfgs
         self.is_test = is_test 

@@ -1,19 +1,20 @@
 path_to_prediction_pth='experiments/proposals/ytb_train/inference/youtubevos_val200_meta/predictions.pth'
 eval_flag=ytb
-NGPU=8
+NGPU=1
 ranks=$(expr $NGPU - 1)
 rank=0
 batch_size=1
 input_h=255 
 input_w=448 
 MODEL='./experiments/dmmnet/ytb_255_50/epo08_iter01640/' 
-part=p100
+MODEL='./experiments/dmmnet/ytb_255_50_matchloss_epo13/epo13_iter01640/' 
+# part=max12hours
 
 for i in $(seq 0 ${ranks}) 
 do
     rank=$i
     echo ` \
-     srun -p $part --mem=10G --gres=gpu:1 -x ~/.exclude -J $eval_flag \
+    # srun -p $part --mem=10G --gres=gpu:1 -x ~/.exclude -J $eval_flag \
     python \
     eval.py \
     -eval_flag ${eval_flag} \
