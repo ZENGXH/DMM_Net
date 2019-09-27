@@ -1,0 +1,10 @@
+matching_score_thre: 0 
+matching:
+    match_max_score: 1 
+    algo: 'relax'
+    cost: 'cosine' 
+relax_max_iter: 10 
+relax_proj_iter: 5 
+relax_learning_rate: 0.1
+
+score_weight: 0.3

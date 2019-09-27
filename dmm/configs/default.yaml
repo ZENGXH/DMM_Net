@@ -1,0 +1,18 @@
+sort_max_num: 50 
+matching_score_thre: 0.0
+score_weight: 0.3 
+# ----
+# algo
+# ----
+relax: 1
+relax_max_iter: 400 
+relax_proj_iter: 50
+relax_topk: 0 
+relax_learning_rate: 0.1
+matching:
+    match_max_score: 1
+    algo: 'relax'
+    cost: 'cosine'
+
+encoder:
+    nms_thresh: 0.4
