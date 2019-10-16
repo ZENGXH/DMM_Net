@@ -205,8 +205,16 @@ class MyDataset(data.Dataset):
             if DEBUG:
                 logging.info('open img {}: {}'.format(frame_img, np.array(img).sum()))
             if self.inputRes is not None:
-                img   = imresize(img, self.inputRes) 
-                annot = imresize(annot, self.inputRes, interp='nearest') 
+                # img   = imresize(img, self.inputRes) 
+                # annot = imresize(annot, self.inputRes, interp='nearest') 
+                img = np.array(img.resize(
+                               (self.inputRes[1], self.inputRes[0])
+                              ))
+                annot = np.array(annot.resize(
+                               (self.inputRes[1], self.inputRes[0]), Image.NEAREST
+                              ))
+                CHECKEQ(img.shape[-1], self.inputRes[1])
+                CHECKEQ(img.shape[-2], self.inputRes[0])
             if self.transform is not None:
                 img = self.transform(img)
             annot = np.expand_dims(annot, axis=0)
