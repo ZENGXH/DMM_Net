@@ -124,7 +124,8 @@ DMM/experiments
 ## Training
 - Train DMMnet on youtubeVOS: 
 ```
-sh scripts/train/train_load_prop.sh
+sh scripts/train/train_101.sh 
+# or scripts/train/train_50.sh # for resnet 50 mode  
 ```
 
 ### Online training
