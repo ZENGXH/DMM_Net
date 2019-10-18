@@ -18,8 +18,9 @@ part=max12hours
 for i in $(seq 0 ${ranks}) 
 do
     rank=$i
-    echo ` \
     # srun -p $part --mem=10G --gres=gpu:1 -x ~/.exclude -J $eval_flag \
+
+    echo ` \
     python \
     eval.py \
     -eval_flag ${eval_flag} \
