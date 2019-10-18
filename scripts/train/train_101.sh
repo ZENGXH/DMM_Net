@@ -11,8 +11,8 @@ mkdir -p ${model_root}/log
 
 MODEL_NAME=ytb_train_x101
 
-srun -p max12hours --gres=gpu:$NGPU --mem=45G -c 8 \
-    -x ~/.exclude \
+# srun -p max12hours --gres=gpu:$NGPU --mem=45G -c 8 \
+#    -x ~/.exclude \
     python \
     -m torch.distributed.launch --nproc_per_node=$NGPU \
      train.py \
