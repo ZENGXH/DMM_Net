@@ -12,9 +12,10 @@ MODEL='./experiments/dmmnet/ytb_255_50_matchloss_epo13/epo13_iter01640/'
 
 for i in $(seq 0 ${ranks}) 
 do
-    rank=$i
-    echo ` \
+    rank=$i    
     # srun -p $part --mem=10G --gres=gpu:1 -x ~/.exclude -J $eval_flag \
+
+    echo ` \
     python \
     eval.py \
     -eval_flag ${eval_flag} \
