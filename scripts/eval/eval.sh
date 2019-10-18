@@ -12,9 +12,9 @@ part=p100
 for i in $(seq 0 ${ranks}) 
 do
     rank=$i
+    # srun -p $part --mem=10G --gres=gpu:1 \
+    #    -x ~/.exclude -J $eval_flag \
     echo ` \
-    srun -p $part --mem=10G --gres=gpu:1 \
-        -x ~/.exclude -J $eval_flag \
     python \
     eval.py \
     -eval_flag ${eval_flag} \
