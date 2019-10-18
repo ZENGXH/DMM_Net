@@ -9,7 +9,7 @@ model_root='./experiments/models/' # path to saved the model
 MODEL_NAME=online_ytb 
     # --resume -resume_path './experiments/dmmnet/ytb_255_b44l3_101/epo01_iter01640/' -epoch_resume 2 \
 
- srun -p interactive --gres=gpu:$NGPU --mem=49G -c 8 -x ~/.exclude \
+# srun -p interactive --gres=gpu:$NGPU --mem=49G -c 8 -x ~/.exclude \
     python \
     -m torch.distributed.launch --nproc_per_node=$NGPU \
     train.py \
