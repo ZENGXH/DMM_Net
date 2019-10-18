@@ -9,8 +9,8 @@ Nworkers=4
 model_root='../../experiments/models/' # path to saved the model
 MODEL_NAME=ytb_r50_w11
 
-srun -p p100 --gres=gpu:$NGPU --mem=45G -c 8 \
-    -x ~/.exclude \
+# srun -p p100 --gres=gpu:$NGPU --mem=45G -c 8 \
+#    -x ~/.exclude \
     python \
     -m torch.distributed.launch --nproc_per_node=$NGPU \
      train.py \
