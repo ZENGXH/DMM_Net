@@ -5,7 +5,7 @@ if [ ! -e $pretrain_path ]; then
     if [ ! -e one-shot-model-youtubevos.zip ]; then
         wget https://imatge.upc.edu/web/sites/default/files/projects/segmentation/public_html/rvos-pretrained-models/one-shot-model-youtubevos.zip
     fi
-    # unzip -rq one-shot-model-youtubevos.zip # && rm one-shot-model-youtubevos.zip
+    unzip -rq one-shot-model-youtubevos.zip # && rm one-shot-model-youtubevos.zip
     mkdir -p ${pretrain_path} && mv one-shot-model-youtubevos ${pretrain_path}
 fi
 
