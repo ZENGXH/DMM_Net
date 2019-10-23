@@ -1,3 +1,14 @@
+pretrain_path=experiments/dmmnet/pretrained_rvos/
+# if [ ! -d $dir ]
+if [ ! -e $pretrain_path ]; then
+    echo "start downloading pretrained model to ${pretrain_path}"
+    if [ ! -e one-shot-model-youtubevos.zip ]; then
+        wget https://imatge.upc.edu/web/sites/default/files/projects/segmentation/public_html/rvos-pretrained-models/one-shot-model-youtubevos.zip
+    fi
+    # unzip -rq one-shot-model-youtubevos.zip # && rm one-shot-model-youtubevos.zip
+    mkdir -p ${pretrain_path} && mv one-shot-model-youtubevos ${pretrain_path}
+fi
+
 BS=4
 NGPU=4
 train_h=255
